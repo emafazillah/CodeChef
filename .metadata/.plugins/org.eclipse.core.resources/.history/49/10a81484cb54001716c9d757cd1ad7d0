@@ -1,0 +1,26 @@
+package beginner;
+
+import java.util.Scanner;
+
+public class AdaAndCrayons {
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		int countU = 0;
+		int countD = 0;
+		for(int i = 0; i < n; i++) {
+			String input = scan.next();
+			char[] arr = input.toCharArray();
+			String prev = "";
+			for(int j = 0; j < (arr.length - 1); j++) {
+				if(j > 0) {
+					
+				} else 
+					prev = Character.toString(arr[j]);
+			}
+		}
+		scan.close();
+	}
+
+}

@@ -1,0 +1,9 @@
+package beginner;
+
+public class AdaAndCrayons {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

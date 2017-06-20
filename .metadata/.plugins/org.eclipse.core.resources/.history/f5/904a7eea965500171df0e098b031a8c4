@@ -1,0 +1,46 @@
+package beginner;
+
+import java.util.Scanner;
+
+class AdaAndCrayons {
+	
+	public static void main(String args[] ) throws Exception {
+	       Scanner scan = new Scanner(System.in);
+	       int t = scan.nextInt();
+	       
+	       while(t-- > 0) {
+	           String s = scan.next();
+	           int count = 0;
+	           int i=0;
+	            while(i<s.length()-1){
+	                if(s.charAt(i)==s.charAt(i+1)){
+	                s=s.substring(0,i)+s.substring(i+1);
+	                    i=0;
+	                }
+	                else{
+	                    i++;
+	                }
+	                System.out.println("s==="+s);
+	            }
+	           int cd=0;
+	           int cu=0;
+	           //System.out.println(s);
+	           for(int i1=0;i1<s.length();i1++){
+	               if(s.charAt(i1)=='D'){
+	                   cd++;
+	               }
+	               else{
+	                   cu++;
+	               }
+	           }
+	           if(cu<cd){
+	               System.out.println(cu);
+	           }
+	           else{
+	               System.out.println(cd);
+	           }
+	       }
+	        
+	    }
+
+}

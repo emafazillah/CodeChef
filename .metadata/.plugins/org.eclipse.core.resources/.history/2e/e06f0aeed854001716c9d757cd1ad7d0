@@ -1,0 +1,39 @@
+package beginner;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class AdaAndCrayons {
+	
+	public static void main(String[] args) throws Exception {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		List<String> list = new ArrayList<String>();
+		for(int i = 0; i < n; i++) {
+			list.add(scan.next());
+		}		
+		scan.close();
+		int countU = 0;
+		int countD = 0;
+		while(n-- > 0) {
+			String input = list.get(n);
+			char[] arr = input.toCharArray();
+			for(int i = 0; i < (arr.length - 1); i++) {
+				char curr = arr[i];
+				char next = arr[i + 1];
+				if(curr != next) {
+					if("U".equals(String.valueOf(curr))) 
+						countU++;
+					else 
+						countD++;
+				}
+			}
+		}
+		if(countU > countD) 
+			System.out.println(countD);
+		else 
+			System.out.println(countU);
+	}
+
+}
